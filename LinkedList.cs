@@ -44,7 +44,18 @@ namespace ConsoleApplication6
 
         public int GetLength() // TODO
         {
-            return head.element.Length;
+            Node current = head;
+            if (head == null)
+            {
+                return 0;
+            }
+            int lengthCounter = 1;
+            while (current.next != null)
+            {
+                current = current.next;
+                lengthCounter++; // same as lenghtCounter = lenghtCounter +1;
+            }
+            return lengthCounter;
         }
 
         void InsertFirst(string elementToInsert)

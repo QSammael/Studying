@@ -28,11 +28,11 @@ namespace ConsoleApplication6
             // todo.Insert(5,"boook");
             todo.GetElement(1);
             {
-                Console.Write(todo.GetElement(6));//why i still need to write a number
+                Console.WriteLine(todo.GetElement(1));//why i still need to write a number
             }
            todo.GetLength();
             {
-                Console.Write(todo.GetLength());
+                Console.WriteLine(todo.GetLength());
             }
       //      int contar = todo.GetLength()-1;
 //            while (contar >= 0)
