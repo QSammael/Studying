@@ -46,7 +46,6 @@ namespace ConsoleApplication6
         {
             return head.element.Length;
         }
-        private Node head;
 
         void InsertFirst(string elementToInsert)
         {
@@ -60,5 +59,6 @@ namespace ConsoleApplication6
         {
             head = head.next;
         }
+        private Node head;
     }
 }
