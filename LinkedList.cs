@@ -45,12 +45,8 @@ namespace ConsoleApplication6
         public int GetLength() // TODO
         {
             Node current = head;
-            if (head == null)
-            {
-                return 0;
-            }
-            int lengthCounter = 1;
-            while (current.next != null)
+            int lengthCounter = 0;
+            while (current != null)
             {
                 current = current.next;
                 lengthCounter++; // same as lenghtCounter = lenghtCounter +1;
