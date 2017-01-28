@@ -30,17 +30,17 @@ namespace ConsoleApplication6
             {
                 Console.WriteLine(todo.GetElement(1));//why i still need to write a number
             }
-           todo.GetLength();
+            todo.GetLength();
             {
                 Console.WriteLine(todo.GetLength());
             }
-      //      int contar = todo.GetLength()-1;
-//            while (contar >= 0)
-//            {
-//                Console.WriteLine(todo.GetElement(contar));
-//                contar = contar - 1;
-//            }
-            
+            //      int contar = todo.GetLength()-1;
+            //            while (contar >= 0)
+            //            {
+            //                Console.WriteLine(todo.GetElement(contar));
+            //                contar = contar - 1;
+            //            }
+            todo.RemoveElement(5);
             Console.ReadKey();
         }
     }

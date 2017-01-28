@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -67,5 +68,19 @@ namespace ConsoleApplication6
             head = head.next;
         }
         private Node head;
+        public void RemoveElement(int elementNumber)
+        {
+            Node current = head;
+            int elementToRemove = 1;
+            while (current != null)
+            {
+                current = current.next;
+                elementToRemove++;
+                if (elementToRemove == elementNumber)
+                {
+                    current = current.next;
+                }
+            }
+        }
     }
 }
