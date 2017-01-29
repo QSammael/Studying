@@ -24,15 +24,22 @@ namespace ConsoleApplication6
                 }
                 todo.Add(leer);
             }
-            todo.RemoveElement(5);
-            lector = new StreamReader("wordspace.txt");
-            string readFile = lector.ReadToEnd();
-            Console.WriteLine(readFile);
             //  todo.Remove(0);
             // todo.Insert(5,"boook");
-            //            todo.GetElement(0);
+            todo.RemoveElement(3);
+            todo.WriteList();
+//            todo.GetElement(0);//it does not matter numbers are diffferent
+//            {
+//                int startList = 0;
+//                while (startList < todo.GetLength())
+//                {
+//                    Console.WriteLine(todo.AllTheElements(todo.GetLength()));
+//                    startList++;
+//                }
+//            }
+            //            todo.AllTheElements(todo.GetLength());
             //            {
-            //                Console.WriteLine(todo.GetElement(0));//why i still need to write a number
+            //                Console.WriteLine(todo.AllTheElements(todo.GetLength()));
             //            }
             todo.GetLength();
             {
@@ -44,6 +51,7 @@ namespace ConsoleApplication6
             //                Console.WriteLine(todo.GetElement(contar));
             //                contar = contar - 1;
             //            }
+
             Console.ReadKey();
         }
     }
