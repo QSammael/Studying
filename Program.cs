@@ -24,11 +24,14 @@ namespace ConsoleApplication6
                 }
                 todo.Add(leer);
             }
+            lector = new StreamReader("wordspace.txt");
+            string readFile = lector.ReadToEnd();
+            Console.WriteLine(readFile);
             //  todo.Remove(0);
             // todo.Insert(5,"boook");
-            todo.GetElement(1);
+            todo.GetElement(0);
             {
-                Console.WriteLine(todo.GetElement(1));//why i still need to write a number
+                Console.WriteLine(todo.GetElement(0));//why i still need to write a number
             }
             todo.GetLength();
             {
