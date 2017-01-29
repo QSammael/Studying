@@ -26,17 +26,22 @@ namespace ConsoleApplication6
             }
             //  todo.Remove(0);
             // todo.Insert(5,"boook");
-            todo.RemoveElement(3);
-            todo.WriteList();
-//            todo.GetElement(0);//it does not matter numbers are diffferent
-//            {
-//                int startList = 0;
-//                while (startList < todo.GetLength())
-//                {
-//                    Console.WriteLine(todo.AllTheElements(todo.GetLength()));
-//                    startList++;
-//                }
-//            }
+            todo.RemoveElement(1);
+            
+            LinkedList.Iterator currentIterator = todo.GetIterator();
+            while (true)
+            {
+                Console.WriteLine(currentIterator.GetCurrent());
+                if (!currentIterator.MoveNext())
+                {
+                    break;
+                }
+            }
+            
+
+            // todo.WriteList();
+            //            todo.GetElement(0);//it does not matter numbers are diffferent
+
             //            todo.AllTheElements(todo.GetLength());
             //            {
             //                Console.WriteLine(todo.AllTheElements(todo.GetLength()));

@@ -14,6 +14,42 @@ namespace ConsoleApplication6
             public string element;
             public Node next;
         }
+
+        public class Iterator
+        {
+            public string GetCurrent()
+            {
+                return current.element;
+            }
+
+            public bool MoveNext()
+            {
+                current = current.next;
+                return current != null;
+                //                bool noNextElement = current == null;
+                //                //if (current == null)
+                //                if (noNextElement)
+                //                {
+                //                    return false;
+                //                }
+                //                else
+                //                {
+                //                    return true;
+                //                }
+            }
+
+            public Iterator(LinkedList list)
+            {
+                current = list.head;
+            }
+
+            private Node current;
+        }
+
+        public Iterator GetIterator()
+        {
+            return new Iterator(this);
+        }
         public void Add(string elementToInsert)
         {
             if (head == null)
@@ -34,7 +70,7 @@ namespace ConsoleApplication6
         public string GetElement(int elementNumber)// TODO
         {
             Node current = head;
-            int currentIndex = 1;
+            int currentIndex = 0;
             while (currentIndex < elementNumber)
             {
                 current = current.next;
@@ -68,18 +104,23 @@ namespace ConsoleApplication6
             }
             return lengthCounter;
         }
-        public void RemoveElement(int elementNumber)
+        public void RemoveElement(int elementToRemove)
         {
+            if (elementToRemove == 0)
+            {
+                head = head.next;
+                return;
+            }
             Node current = head;
-            int elementToRemove = 0;
+            int currentElementNumber = 0;
             while (current != null)
             {
-                current = current.next;
-                elementToRemove++;
-                if (elementToRemove == elementNumber)
+                if (currentElementNumber == elementToRemove - 1)
                 {
                     current.next = current.next.next;
                 }
+                current = current.next;
+                currentElementNumber++;
             }
         }
 
