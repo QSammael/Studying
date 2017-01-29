@@ -71,14 +71,14 @@ namespace ConsoleApplication6
         public void RemoveElement(int elementNumber)
         {
             Node current = head;
-            int elementToRemove = 1;
+            int elementToRemove = 0;
             while (current != null)
             {
                 current = current.next;
                 elementToRemove++;
                 if (elementToRemove == elementNumber)
                 {
-                    current = current.next;
+                    current.next = current.next.next;
                 }
             }
         }

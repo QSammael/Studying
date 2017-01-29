@@ -24,15 +24,16 @@ namespace ConsoleApplication6
                 }
                 todo.Add(leer);
             }
+            todo.RemoveElement(5);
             lector = new StreamReader("wordspace.txt");
             string readFile = lector.ReadToEnd();
             Console.WriteLine(readFile);
             //  todo.Remove(0);
             // todo.Insert(5,"boook");
-            todo.GetElement(0);
-            {
-                Console.WriteLine(todo.GetElement(0));//why i still need to write a number
-            }
+            //            todo.GetElement(0);
+            //            {
+            //                Console.WriteLine(todo.GetElement(0));//why i still need to write a number
+            //            }
             todo.GetLength();
             {
                 Console.WriteLine(todo.GetLength());
@@ -43,7 +44,6 @@ namespace ConsoleApplication6
             //                Console.WriteLine(todo.GetElement(contar));
             //                contar = contar - 1;
             //            }
-            todo.RemoveElement(5);
             Console.ReadKey();
         }
     }
