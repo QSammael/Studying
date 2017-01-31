@@ -2,6 +2,39 @@ namespace ConsoleApplication6
 {
     class ResizableArray
     {
+        public class Iterator
+        {
+            public string GetCurrent()
+            {
+                return sourceArray.GetElement(currentIndex);
+            }
+
+            public bool MoveNext()
+            {
+                currentIndex++;
+                return currentIndex != sourceArray.GetLength();
+//                if (currentIndex == sourceArray.GetLength()) same as previous 
+//                {
+//                    return false;
+//                }
+//                return true;
+            }
+
+            public Iterator(ResizableArray source)
+            {
+                sourceArray = source;
+                currentIndex = 0;
+            }
+
+            private ResizableArray sourceArray;
+            private int currentIndex;
+
+        }
+
+        public Iterator GetIterator()
+        {
+            return new Iterator(this);
+        }
         static string[] Copy(string[] source)
         {
             string[] temporary = new string[source.Length * 2];
@@ -34,16 +67,16 @@ namespace ConsoleApplication6
             length = length - 1;
         }
 
-//        public void Insert(int elementNumber, string extra)
-//        {
-//            Add(extra);
-//            while ()
-//                data[elementNumber] = extra;
-//        }
-//        public int GetLength()
-//        {
-//            return length;
-//        }
+        //        public void Insert(int elementNumber, string extra)
+        //        {
+        //            Add(extra);
+        //            while ()
+        //                data[elementNumber] = extra;
+        //        }
+        public int GetLength()
+        {
+            return length;
+        }
 
         public string GetElement(int elementNumber)
         {
